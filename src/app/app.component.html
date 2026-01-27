@@ -1,1 +1,153 @@
-<router-outlet />
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <p>🎉 Free Shipping on Orders Above ₹999 | Use Code: BRIJ10</p>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="container header-content">
+    <div class="logo">
+      <h1>Brijbhog</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Sweets</a>
+      <a href="#">Namkeen</a>
+      <a href="#">Gifting</a>
+      <a href="#">About Us</a>
+    </nav>
+    <div class="user-actions">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-user"></i>
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="badge">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <h2>Taste the Tradition of Braj</h2>
+    <p>Authentic Sweets & Savories crafted with love since 1990.</p>
+    <button class="btn-primary">Shop Now</button>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section container">
+  <div class="value-item">
+    <i class="fa-solid fa-leaf"></i>
+    <h3>Pure Ingredients</h3>
+    <p>100% natural and fresh ingredients.</p>
+  </div>
+  <div class="value-item">
+    <i class="fa-solid fa-award"></i>
+    <h3>Authentic Recipe</h3>
+    <p>Traditional recipes passed down generations.</p>
+  </div>
+  <div class="value-item">
+    <i class="fa-solid fa-truck-fast"></i>
+    <h3>Pan India Delivery</h3>
+    <p>Delivered fresh to your doorstep.</p>
+  </div>
+</section>
+
+<!-- Bestsellers -->
+<section class="products-section container">
+  <div class="section-title">
+    <h2>Our All-Time Favorites</h2>
+    <p>Handpicked delights loved by everyone</p>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-image">
+        <span class="product-badge" *ngIf="product.badge">{{ product.badge }}</span>
+        <img [src]="product.image" [alt]="product.name">
+        <div class="overlay-actions">
+          <button title="Add to Cart"><i class="fa-solid fa-cart-plus"></i></button>
+          <button title="View Details"><i class="fa-regular fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="price">₹{{ product.price }} / kg</p>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legacy Section -->
+<section class="legacy-section">
+  <div class="container legacy-content">
+    <div class="legacy-text">
+      <h2>A Legacy of Sweetness</h2>
+      <p>Brijbhog brings you the divinely sweet flavors of Braj. Our journey began with a simple mission: to serve the
+        most authentic and pure sweets using traditional methods.</p>
+      <button class="btn-outline">Read Our Story</button>
+    </div>
+    <div class="legacy-image-placeholder">
+      <!-- Placeholder for a legacy image -->
+      <div class="placeholder-box">Since 1990</div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+  <div class="container">
+    <h2>Join the Sweet Family</h2>
+    <p>Subscribe to get exclusive offers and updates.</p>
+    <div class="subscribe-form">
+      <input type="email" placeholder="Enter your email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3>Brijbhog</h3>
+      <p>Celebrating the sweetness of life with authentic Indian mithai.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Gifting</a></li>
+        <li><a href="#">Sugar Free</a></li>
+        <li><a href="#">Namkeen</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fa-solid fa-envelope"></i> hello&#64;brijbhog.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Vrindavan, Mathura</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Brijbhog. All rights reserved.</p>
+  </div>
+</footer>
